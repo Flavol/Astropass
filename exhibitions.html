@@ -5,6 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> AstroPass </title>
     <style>
+               footer {
+            background-color: #333; 
+            color: #fff; 
+            padding: 20px 0;
+            text-align: center;
+            position: relative; 
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center; 
+            flex-wrap: wrap; 
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .footer-links li {
+            margin: 0 15px;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s; 
+        }
+
+        .footer-links a:hover {
+            color: #f0db4f; 
+        }
+
+        .footer-social ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .footer-social li {
+            margin: 0 10px;
+        }
+
+        .footer-social a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .footer-social a:hover {
+            color: #f0db4f;
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            font-size: 0.8em;
+        }
+
+        
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-links ul,
+            .footer-social ul {
+                margin-bottom: 10px;
+                justify-content: center;
+            }
+        }
         .bloks{
     
     padding: 15px;
@@ -47,12 +127,12 @@ footer {
     background-color: #333; 
     color: #fff; 
     padding: 15px; 
-    text-align: center; /* По центру */
+    text-align: center; 
   }
   
   footer a {
-    color: #fff; /* Белый цвет ссылок */
-    text-decoration: none; /* Убрать подчеркивание */
+    color: #fff; 
+    text-decoration: none; 
   }
     @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
  
@@ -61,14 +141,7 @@ footer {
     animation: background 14s infinite alternate;
     background-size: cover;
 } 
-/*@keyframes background {
-    50% {
-        background: linear-gradient(90deg, rgb(0, 0, 0) -5%, rgb(45, 113, 48) 100%);
-        box-shadow: 0 -140px 70px -120px rgba(0, 0, 0, 0.425) inset,
-                0 -210px 70px -120px rgba(56, 56, 56, 0.407) inset,
-                0 -280px 70px -120px rgba(0, 0, 0, 0.597) inset;
-    }
-}*/
+
 .panel{
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
     display: block;
@@ -464,6 +537,29 @@ footer {
 
 </main>
 <footer>
-    <p>&copy; 2025 Компания SportakOriginal | <a href="#">Контакты</a></p>
+    <div class="footer-container">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="About us.html">О нас</a></li>
+                    <li><a href="About the museum.html">О музее</a></li>
+                    <li><a href="exhibitions.html">Выставки</a></li>
+                    <li><a href="Basket.html">Корзина</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <ul>
+                    <li><a href="" aria-label="Facebook"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2025 Ваш Сайт. Все права защищены. | <a href="https://yandex.ru/legal/confidential/?from=fullscreen">Политика конфиденциальности</a> | <a href="https://www.advokatorium.com/ru/knowledge/obrazets-polzovatelskogo-soglasheniya-dlya-sayta">Условия использования</a>
+        </div>
 </footer>
 </html>

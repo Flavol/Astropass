@@ -7,36 +7,104 @@
     <link href="style.css" rel="stylesheet">
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
-       footer {
-    border-radius: 5px;
-    background-color: #333; /* Темный фон */
-    color: #fff; /* Белый текст */
-    padding: 15px; /* Отступы */
-    text-align: center; /* По центру */
-  }
-  
-  footer a {
-    color: #fff; /* Белый цвет ссылок */
-    text-decoration: none; /* Убрать подчеркивание */
-  }
+        footer {
+            background-color: #333; 
+            color: #fff; 
+            padding: 20px 0;
+            text-align: center;
+            position: relative; 
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center; 
+            flex-wrap: wrap; 
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .footer-links li {
+            margin: 0 15px;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s; 
+        }
+
+        .footer-links a:hover {
+            color: #f0db4f; 
+        }
+
+        .footer-social ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .footer-social li {
+            margin: 0 10px;
+        }
+
+        .footer-social a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .footer-social a:hover {
+            color: #f0db4f;
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            font-size: 0.8em;
+        }
+
+        
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-links ul,
+            .footer-social ul {
+                margin-bottom: 10px;
+                justify-content: center;
+            }
+        }
       .product-container {
         font-family: "Exo 2", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     font-weight: 1,100,900;
         display: flex;
-        width: 1000px; /* Увеличиваем общую ширину */
+        width: 1000px; 
         border: 1px ;
-        margin: 20px auto; /* Автоматические отступы слева и справа для центрирования всего блока */
+        margin: 20px auto; 
         padding: 20px;
-        align-items: flex-start; /* Выравнивание по верхнему краю */
+        align-items: flex-start; 
       }
   
       .image-order-container {
         display: flex;
         flex-direction: column;
-        align-items: center;  /* Центрирование содержимого колонки */
-        width: 900px; /* Увеличиваем ширину картинки */
+        align-items: center;  
+        width: 900px; 
         margin-right: 20px;
       }
   
@@ -57,17 +125,17 @@
         font-size: 20px;
         font-weight: bold;
         margin-bottom: 5px;
-        text-align: center; /*Центрируем название товара*/
+        text-align: center; 
       }
   
       .product-description {
         margin-bottom: 10px;
-        text-align: center; /*Выравнивание текста описания по ширине*/
+        text-align: center; 
       }
   
       .price-order-container {
         display: flex;
-        justify-content: center; /* Центрирование цены и кнопки */
+        justify-content: center; 
       }
   
       .product-price {
@@ -94,7 +162,7 @@
         border-radius: 5px;
       }
   
-      /* Стили для модального окна (остаются без изменений) */
+      
       .modal {
         display: none;
         position: fixed;
@@ -210,7 +278,7 @@
   </div>
 
   <script>
-        // JavaScript код (остается без изменений)
+
         var modal = document.getElementById("orderModal");
     
         function openModal() {
@@ -227,7 +295,6 @@
           }
         }
 
-        // JavaScript код (остается без изменений)
         var modal = document.getElementById("orderModal");
     
         function openModal() {
@@ -255,14 +322,37 @@
         }
 
         localStorage.setItem('cart', JSON.stringify(cart));
-        // Redirect to cart page after adding to cart.
+      
 
       }
   </script>
 
 </main>
 <footer>
-  <p>&copy; 2025 Компания SportakOriginal | <a href="#">Контакты</a></p>
+    <div class="footer-container">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="About us.html">О нас</a></li>
+                    <li><a href="About the museum.html">О музее</a></li>
+                    <li><a href="exhibitions.html">Выставки</a></li>
+                    <li><a href="Basket.html">Корзина</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <ul>
+                    <li><a href="" aria-label="Facebook"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2025 Ваш Сайт. Все права защищены. | <a href="https://yandex.ru/legal/confidential/?from=fullscreen">Политика конфиденциальности</a> | <a href="https://www.advokatorium.com/ru/knowledge/obrazets-polzovatelskogo-soglasheniya-dlya-sayta">Условия использования</a>
+        </div>
 </footer>
 </body>
 </html>

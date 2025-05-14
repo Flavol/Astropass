@@ -97,26 +97,26 @@
  
        
 <script>
-    // Получаем элементы
+
 var modal = document.getElementById("myModal");
 var img = document.getElementById("myImg");
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
 var span = document.getElementsByClassName("close")[0];
 
-// При клике на изображение открываем модальное окно
+
 img.onclick = function(){
   modal.style.display = "block";
   modalImg.src = this.src;
   captionText.innerHTML = this.alt;
 }
 
-// При клике на крестик закрываем модальное окно
+
 span.onclick = function() {
   modal.style.display = "none";
 }
 
-// При клике вне изображения закрываем модальное окно
+
 modal.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
@@ -126,7 +126,30 @@ modal.onclick = function(event) {
 
 </main>
 <footer>
-    <p>&copy; 2025 Компания SportakOriginal | <a href="#">Контакты</a></p>
+    <div class="footer-container">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="About us.html">О нас</a></li>
+                    <li><a href="About the museum.html">О музее</a></li>
+                    <li><a href="exhibitions.html">Выставки</a></li>
+                    <li><a href="Basket.html">Корзина</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <ul>
+                    <li><a href="" aria-label="Facebook"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2025 Ваш Сайт. Все права защищены. | <a href="https://yandex.ru/legal/confidential/?from=fullscreen">Политика конфиденциальности</a> | <a href="https://www.advokatorium.com/ru/knowledge/obrazets-polzovatelskogo-soglasheniya-dlya-sayta">Условия использования</a>
+        </div>
 </footer>
 </body>
 </html>
