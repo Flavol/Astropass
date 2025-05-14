@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> AstroPass </title>
+    <link href="style.css" rel="stylesheet">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+       footer {
+    border-radius: 5px;
+    background-color: #333; /* Темный фон */
+    color: #fff; /* Белый текст */
+    padding: 15px; /* Отступы */
+    text-align: center; /* По центру */
+  }
+  
+  footer a {
+    color: #fff; /* Белый цвет ссылок */
+    text-decoration: none; /* Убрать подчеркивание */
+  }
+      .product-container {
+        font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 1,100,900;
+        display: flex;
+        width: 1000px; /* Увеличиваем общую ширину */
+        border: 1px ;
+        margin: 20px auto; /* Автоматические отступы слева и справа для центрирования всего блока */
+        padding: 20px;
+        align-items: flex-start; /* Выравнивание по верхнему краю */
+      }
+  
+      .image-order-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;  /* Центрирование содержимого колонки */
+        width: 900px; /* Увеличиваем ширину картинки */
+        margin-right: 20px;
+      }
+  
+      .product-image {
+        border-radius: 20px;
+        padding: 10px;
+        width: 300px;
+        height: 200px;
+      }
+  
+      .product-details {
+        border-radius: 15px ;
+        background: #333;
+        flex-grow: 1;
+      }
+  
+      .product-title {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        text-align: center; /*Центрируем название товара*/
+      }
+  
+      .product-description {
+        margin-bottom: 10px;
+        text-align: center; /*Выравнивание текста описания по ширине*/
+      }
+  
+      .price-order-container {
+        display: flex;
+        justify-content: center; /* Центрирование цены и кнопки */
+      }
+  
+      .product-price {
+        font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 1,100,900;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 6px;
+        margin-right: 5px;
+      }
+  
+      .order-button {
+      font-family: "Exo 2", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+      font-weight: 1,100,900;
+        background-color: #4CAF50;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+  
+      /* Стили для модального окна (остаются без изменений) */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+  
+      .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+      }
+  
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+  
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+   .product-details:hover{
+      color: #eaeaea;
+    }
+    </style>
+
+</head>
+<body>
+
+<nav class="panel">
+    <Div class="panel1" align="center">
+    <Div>
+        <a href="index.html"><img class="logo" src="pic/penguin.png"></a>
+    </Div>
+    
+        <button class="btv"><a href="index.html" class="str_wistawka">Главная</a></button>
+        <button class="btv"><a href="About the museum.html" class="str_wistawka">О музее</a></button>
+        <button class="btv"><a href="About us.html" class="str_wistawka">О нас</a></button>
+        <button class="btv"><a href="exhibitions.html" class="str_wistawka">Выставки</a></button>
+        <button class="btv"><a href="Basket.html" class="str_wistawka">Корзина</a></button>
+
+    
+</div>
+    </Div>
+</nav>
+<main class="telo">
+
+  <div class="product-container">
+
+    <div class="image-order-container">
+      <img src="pic/voroneg.jpeg" alt="Изображение товара" class="product-image" id="myImg">
+      <div class="price-order-container">
+        <span class="product-price"></span>
+        <button class="order-button" onclick="addToCart('Воронеж', 750)">Добавить в корзину</button>
+        <button class="order-button" onclick="openModal()">Заказать: 750 - 2500 ₽</button>
+      </div>
+    </div>
+
+    <div class="product-details">
+      <h1 class="product-title" align="center"> Билет в Музей Космонавтики в Воронеже </h1>
+      <p class="product-description">
+        Окунитесь в темноту космоса (специальная программа).
+
+        Что это: билет на ночную программу. Указаны: название, тип (ночная программа), цена.
+        
+        Внутри:
+        
+        Время: Вечерняя программа (уточнять).
+        Что увидеть:
+        Экспозиции при вечернем освещении.
+        Специальные лекции и шоу.
+        Возможность увидеть космос в телескоп (если есть).
+        Эмоции: Тайна космоса, новые впечатления.
+        Еще: Лекции, астрономические наблюдения.
+      </p>
+      <h4 align="center">Приятного путешествия :)</h4>
+    </div>
+
+  </div>
+
+  <div id="orderModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Оформление заказа</h2>
+      <p>Пожалуйста, заполните форму ниже:</p>
+
+      <form>
+        <label for="name">Имя:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="address">Адрес доставки:</label><br>
+        <textarea id="address" name="address" rows="4" cols="50"></textarea><br><br>
+
+        <button type="submit">Отправить заказ</button>
+      </form>
+    </div>
+  </div>
+
+        </div>
+      <div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+  <script>
+     // Получаем элементы
+var modal = document.getElementById("myModal");
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+var span = document.getElementsByClassName("close")[0];
+
+// При клике на изображение открываем модальное окно
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// При клике на крестик закрываем модальное окно
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// При клике вне изображения закрываем модальное окно
+modal.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+          // JavaScript код (остается без изменений)
+        var modal = document.getElementById("orderModal");
+    
+        function openModal() {
+          modal.style.display = "block";
+        }
+    
+        function closeModal() {
+          modal.style.display = "none";
+        }
+    
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            closeModal();
+          }
+        }
+
+         function addToCart(name, price) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let itemIndex = cart.findIndex(item => item.name === name);
+
+        if (itemIndex > -1) {
+            cart[itemIndex].quantity++;
+        } else {
+            cart.push({ name: name, price: price, quantity: 1 });
+        }
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+        // Redirect to cart page after adding to cart.
+
+      }
+        // JavaScript код (остается без изменений)
+        var modal = document.getElementById("orderModal");
+    
+        function openModal() {
+          modal.style.display = "block";
+        }
+    
+        function closeModal() {
+          modal.style.display = "none";
+        }
+    
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            closeModal();
+          }
+        }
+  </script>
+
+</main>
+<footer>
+  <p>&copy; 2025 Компания SportakOriginal | <a href="#">Контакты</a></p>
+</footer>
+</body>
+</html>

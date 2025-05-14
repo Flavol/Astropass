@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> AstroPass </title>
+    <style>
+        .bloks{
+    
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.blok{
+    margin: 200px;
+    align-items: center;
+    max-width: 500px;
+    
+}
+.photo:hover{
+    transform: scale(1.3);
+}
+.photo2:hover{
+    transform: scale(1.3);
+}
+.photo{
+    transition: transform .2s;
+    text-align: center;
+    padding: 100px;
+    background-color: #242c2a;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.tekst{
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 1,100,900;
+    background-color: #242c2a;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+
+footer {
+    background-color: #333; 
+    color: #fff; 
+    padding: 15px; 
+    text-align: center; /* По центру */
+  }
+  
+  footer a {
+    color: #fff; /* Белый цвет ссылок */
+    text-decoration: none; /* Убрать подчеркивание */
+  }
+    @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+ 
+ html{
+    background: black;
+    animation: background 14s infinite alternate;
+    background-size: cover;
+} 
+/*@keyframes background {
+    50% {
+        background: linear-gradient(90deg, rgb(0, 0, 0) -5%, rgb(45, 113, 48) 100%);
+        box-shadow: 0 -140px 70px -120px rgba(0, 0, 0, 0.425) inset,
+                0 -210px 70px -120px rgba(56, 56, 56, 0.407) inset,
+                0 -280px 70px -120px rgba(0, 0, 0, 0.597) inset;
+    }
+}*/
+.panel{
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+    display: block;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(50,52,52,1) 100%);
+    padding: 5px;
+}
+
+.panel1{
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-color: rgba(128, 128, 128, 0);
+    padding: 20px;
+    margin-left: 3px;
+}
+.telo{
+    background-color: rgb(23, 23, 23);
+    padding: 10px;
+    margin: 10px;
+}
+.niz{
+    text-align: center;
+    background-color: rgb(0, 136, 255);
+    border-radius: 30px;
+}
+
+.whot{
+    text-decoration: none;
+    color: white;
+    
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 1,100,900;
+    transition: transform .2s;
+}
+.whot:hover{
+    color:rgb(159, 115, 115);
+    transform: scale(1.2);
+}
+.decor{
+    color: white;
+    text-decoration: none;
+}
+.decor:hover{
+    color: rgb(159, 115, 115);
+    filter: drop-shadow(5px 5px 5px rgba(35, 7, 7, 0.986));
+}
+.logo{
+    
+    transition: transform .2s;
+    border-radius: 10px;
+    width: 45px;
+    height: 45px;
+    opacity: 0.75;
+    
+}
+.logo:hover{
+    transform: scale(1.1);
+    opacity: 1;
+    filter: drop-shadow(5px 5px 5px rgba(49, 11, 11, 0.986));
+}
+
+.btv{
+    transition: transform .2s;
+    padding: 0.5em 2em; 
+    font-size: 0.9em; 
+    background-color: #000000; 
+    color: #fff; 
+    border: none; 
+}
+.btv:hover {
+    transform: scale(1.1);
+    background-color: #242c2a; 
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #ffffff; 
+   }
+
+
+.str_wistawka{
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 1,100,900;
+    text-decoration: none;
+    color: white;
+}
+
+.back{
+    font-size: xx-large ;
+    text-decoration: none;
+    color: white;
+}
+        .panel2{
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-color: rgba(128, 128, 128, 0);
+    padding: 20px;
+    margin-left: 3px;
+    
+}
+.panelq{
+    
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+    display: block;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(50,52,52,1) 100%);
+
+}
+
+.bloks{
+    display: flex;
+    justify-content: space-between;
+}
+.blok{
+    max-width: 300px;
+}
+
+.photo{
+    box-shadow:  0px 10px 20px 0px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 100px;
+    background-color: #242c2a;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    transition: transform .2s;
+    object-fit: contain;
+}
+
+.photo:hover{
+    transform: scale(1.3);
+}
+
+.tekst{
+    box-shadow:  0px 10px 20px 0px rgba(0, 0, 0, 0.5);
+    color: rgb(0, 0, 0);
+    background-color: #242c2a;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#q{
+    background-image: url("pic/pasat.jpg");
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+}
+.btv2{
+    transition: transform .2s;
+    padding: 0.5em 2em; 
+    font-size: 0.9em; 
+    background-color: #000000; 
+    color: #fff; 
+    border: none; 
+}
+.btv2:hover {
+    transform: scale(1.1);
+    background-color: #242c2a; 
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #ffffff; 
+   }
+.w{
+    text-decoration: none;
+    color: white;
+   }
+
+#kor{
+    background-image: url("pic/korolev.jpg");
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;  
+}
+
+#mos{
+    background-image: url("pic/moscow.jpg");
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;  
+}
+.vistavka{
+            background-color: rgb(23, 23, 23);
+}
+
+
+#picture4{
+    background-image: url("pic/sankt-peterburg.jpg");
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+
+}
+
+#picture5{
+    background-image: url("pic/voroneg.jpeg");
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    
+}
+
+#picture6{
+    background-image: url("pic/yaroslavl.jpg");
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    
+}
+
+#picture7{
+    background-image: url("pic/samara.jpg");
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    
+}
+
+#picture8{
+    background-image: url("pic/kazan.jpeg");
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    
+}
+
+#picture9{
+    background-image: url("pic/perm.jpeg");
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    
+}
+#picture10{
+    background-image: url("pic/volgograd.jpeg");
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    
+}
+
+#picture11{
+    background-image: url("pic/tomsk.jpeg");
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    
+}
+
+#picture12{
+    background-image: url("pic/smolensk.jpg");
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    
+}
+
+#picture13{
+    background-image: url("pic/orenbyrg.jpg");
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    
+}
+
+#picture14{
+    background-image: url("pic/ekaterinburg.jpg");
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    
+}
+
+#picture15{
+    background-image: url("pic/novosibirsk.jpg");
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    
+}
+
+
+    </style>
+</head>
+<nav class="panelq">
+    <Div class="panel2" align="center">
+    <Div>
+        <a href="index.html"><img class="logo" src="pic/penguin.png"></a>
+    </Div>
+    
+        <button class="btv2"><a class="w" href="index.html">Главная</a></button>
+        <button class="btv2"><a class="w" href="About the museum.html">О музее</a></button>
+        <button class="btv2"><a class="w" href="About us.html">О нас</a></button>
+        <button class="btv2"><a class="w" href="exhibitions.html">Выставки</a></button>
+        <button class="btv2"><a href="Basket.html" class="w">Корзина</a></button>
+ 
+</div>
+    </Div>
+    
+</nav>
+
+<main class="vistavka">
+    <div>
+        <div class="bloks">
+            <div class="blok">
+                <a href="panel1.html"><div class="photo" id="q"> </div></a>
+                <div class="tekst" align="center"><h1> город Сергиев Посад </h1></div>
+            </div>
+
+            <div class="blok">
+                <a href="panel3.html"><div class="photo" id="kor"> </div></a>
+                <div class="tekst" align="center"> <h1> город Королев </h1> </div>
+            </div>
+
+            <div class="blok">
+                <a href="panel2.html"><div class="photo" id="mos"> </div></a>
+                <div class="tekst" align="center"> <h1> город Москва </h1> </div>
+            </div>       
+    </div>
+
+
+    <div>
+        <div class="bloks">
+            <div class="blok">
+                <a href="panel4.html"><div class="photo" id="picture4"> </div></a>
+                <div class="tekst" align="center"><h1> город Санкт-Петербург </h1></div>
+            </div>
+
+            <div class="blok">
+                <a href="panel5.html"><div class="photo" id="picture5"> </div></a>
+                <div class="tekst" align="center"> <h1> город Воронеж </h1> </div>
+            </div>
+
+            <div class="blok">
+                <a href="panel6.html"><div class="photo" id="picture6"> </div></a>
+                <div class="tekst" align="center"> <h1> город Ярославль </h1> </div>
+            </div>       
+    </div>
+
+
+    <div>
+        <div class="bloks">
+            <div class="blok">
+                <a href="panel7.html"><div class="photo" id="picture7"> </div></a>
+                <div class="tekst" align="center"><h1> город Самара </h1></div>
+            </div>
+
+            <div class="blok">
+                <a href="panel8.html"><div class="photo" id="picture8"> </div></a>
+                <div class="tekst" align="center"> <h1> город Казань </h1> </div>
+            </div>
+
+            <div class="blok">
+                <a href="panel9.html"><div class="photo" id="picture9"> </div></a>
+                <div class="tekst" align="center"> <h1> город Пермь </h1> </div>
+            </div>       
+    </div>
+
+
+    <div>
+        <div class="bloks">
+            <div class="blok">
+                <a href="panel10.html"><div class="photo" id="picture10"> </div></a>
+                <div class="tekst" align="center"><h1> город Волгоград </h1></div>
+            </div>
+
+            <div class="blok">
+                <a href="panel11.html"><div class="photo" id="picture11"> </div></a>
+                <div class="tekst" align="center"> <h1> город Томск </h1> </div>
+            </div>
+
+            <div class="blok">
+                <a href="panel12.html"><div class="photo" id="picture12"> </div></a>
+                <div class="tekst" align="center"> <h1> город Смоленск </h1> </div>
+            </div>       
+    </div>
+
+    <div>
+        <div class="bloks">
+            <div class="blok">
+                <a href="panel13.html"><div class="photo" id="picture13"> </div></a>
+                <div class="tekst" align="center"><h1> город Оренбург </h1></div>
+            </div>
+
+            <div class="blok">
+                <a href="panel14.html"><div class="photo" id="picture14"> </div></a>
+                <div class="tekst" align="center"> <h1> город Екатеринбург </h1> </div>
+            </div>
+
+            <div class="blok">
+                <a href="panel15.html"><div class="photo" id="picture15"> </div></a>
+                <div class="tekst" align="center"> <h1> город Новосибирск </h1> </div>
+            </div>       
+    </div>
+    </div>
+    
+
+</main>
+<footer>
+    <p>&copy; 2025 Компания SportakOriginal | <a href="#">Контакты</a></p>
+</footer>
+</html>
